@@ -141,6 +141,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-本地项目提交git操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/21/本地项目提交git操作/">本地项目提交git操作</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/21/本地项目提交git操作/" class="archive-article-date">
+  	<time datetime="2017-09-21T11:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>终端进入文件<br>1 git init<br>创建.git目录，该目录为仓库，当前目录为工作空间<br>2 然后配置 ssh<br>输入：ssh-keygen -t rsa -C “” (邮箱替换成你登录github的邮箱)</p>
+<p>直接回车，会在上图路径，生成ssh key，如果想其他路径，修改路径<br>继续 输入密码，设置密码，也可直接回车不设置密码，</p>
+<p>3 赋值公钥 添加到github<br>  复制 pbcopy &lt; ~/.ssh/id_rsa.pub   //换成自己的路径，粘贴到下面key中</p>
+<p>4 验证ssh<br>ssh -T git@github.com<br>Hi XXX! You’ve successfully authenticated, but GitHub does not provide shell access.<br>5 成功<br>git config user.name “your name”<br>git config uese.email “your email”</p>
+<p>6 把本地项目提交到github<br>git status  //查看本地自己修改的文件<br>git add .   //  .是所有的文件   添加远程不存在的所有文件<br>git commit -m “提交修改描述”  // 提交修改<br>git remote add origin git@github.com:用户名/项目名.git<br>git push //更新到远程服务器   git push -f origin master<br>完成 ok</p>
+<p>7 其他命令<br>$ git clone  //本地如果无远程代码，先做这步，不然就忽略<br>$ cd //定位到你blog的目录下<br>$ git rm //移除文件</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/21/本地项目提交git操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hexo-博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -321,6 +400,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git hexo</a>
               </li>
             
             <div class="clearfix"></div>
